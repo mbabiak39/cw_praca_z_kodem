@@ -5,11 +5,13 @@ jobs:
   Show-Python_version:
     runs-on: ubuntu-latest
     steps:
-      - run: python
+      - run: python --version
 
   Test-Code-With-Pylint:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
+      - run: ls -lsa
+      - run: pwd
       - run: |
-          pylint $(git ls-files '*.py')
+          pylint app.py
