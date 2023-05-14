@@ -11,6 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: echo $(find . -name "*.py")
-      - run: pylint $(find . -name "*.py")
-
+      - run: |
+          find . -name '*.py' -exec pylint {} \;
