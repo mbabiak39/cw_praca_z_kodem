@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: pip install pylint
       - run: ls -lsa
-      - run: cd .. && ls -lsa
-      - run: cd .. && ls -lsa
+      - run: cd .. && ls
+      - run: cd .. && ls
       - run: |
           find . -name '*.py' -exec pylint {} \;
