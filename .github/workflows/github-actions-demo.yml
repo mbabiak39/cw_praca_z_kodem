@@ -11,6 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: pip install pylint-exit
-      - run: pylint -v app.py $ pylint-exit $?
+      - run: pylint -v /home/runner/work/cw_praca_z_kodem/app.py
 
