@@ -11,7 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: ls -lsa
-      - run: pwd
-      - run: |
-          pylint app.py
+      - run: cd ..
+      - run: pylint -v app.py
