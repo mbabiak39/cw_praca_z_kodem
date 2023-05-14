@@ -12,5 +12,5 @@ jobs:
     steps:
       - run: pip install pylint
       - run: pip install pylint-exit
-      - run: pylint -v app.py
-      - run: pylint-exit $?
+      - run: pylint -v app.py $ pylint-exit $?
+
