@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: echo $(find . -name "*.py")
-      - run: pylint $(find . -name "*.py")
-
+      - run: git clone https://github.com/mbabiak39/cw_praca_z_kodem
+      - run: cd cw_praca_z_kodem
+      - run: find . -name '*.py' -exec pylint {} \;
