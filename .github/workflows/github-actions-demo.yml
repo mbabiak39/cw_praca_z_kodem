@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: pip install pylint
-      - run: cd ..
-      - run: ls -lsa
+      - run: pip install pylint-exit
       - run: pylint -v app.py
+      - run: pylint-exit $?
